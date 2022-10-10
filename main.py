@@ -15,7 +15,7 @@ class ChromeOptions:
         self.option = Options()
         self.option.add_argument('--allow-profiles-outside-user-dir')
         self.option.add_argument('--enable-profile-shortcut-manager')
-        self.option.add_argument(f'user-data-dir=/Users/romankorets/Downloads/chrome_cash {profile_number}')
+        self.option.add_argument(f'user-data-dir=/Users/rk/Downloads/chrome_cash {profile_number}')
         self.option.add_argument(f'--profile-directory=Profile {profile_number}')
         
 def like(number, lst):
@@ -41,7 +41,7 @@ def like(number, lst):
 
 def create_list():
     result = []
-    with open("di_helen__.txt", "r") as file:
+    with open("data_file__.txt", "r") as file:
         lines = file.readlines()
         count_account = 5
         for users in lines:
@@ -49,7 +49,7 @@ def create_list():
                 count_account -= 1
                 result.append(users)
     del lines[0:5]
-    with open("di_helen__.txt", "w+") as file:
+    with open("data_file__.txt", "w+") as file:
         for line in lines:
             file.write(line)
     return result
